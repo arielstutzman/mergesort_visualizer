@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>title</title>
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+  <body>
+    <div class="container">
+      <div class="gradient">
+        <!-- <h3>Input array</h3>-->
+        <!-- Array pre-mergesort -->
+        <div id="input">
+          <div class="array">
+            <ul>
+              <li>5</li>
+              <li>4</li>
+              <li>1</li>
+              <li>8</li>
+              <li>7</li>
+              <li>2</li>
+              <li>6</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Iteration 1 -->
+        <div id="first">
+          <div class="array">
+            <ul>
+              <li>5</li>
+              <li>4</li>
+              <li>1</li>
+              <li>8</li>
+            </ul>
+            <ul>
+              <li>7</li>
+              <li>2</li>
+              <li>6</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pointers">
+          <ul>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+        </div>
+        <!-- Iteration 2 -->
+        <div class="array">
+          <ul>
+            <li>5</li>
+            <li>4</li>
+          </ul>
+          <ul>
+            <li>1</li>
+            <li>8</li>
+          </ul>
+          <ul>
+            <li>7</li>
+            <li>2</li>
+          </ul>
+          <ul>
+            <li>6</li>
+            <li>3</li>
+          </ul>
+        </div>
+        <div class="pointers">
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+        </div>
+        <!-- Iteration 3 -->
+        <div class="array">
+          <ul>
+            <li>5</li>
+          </ul>
+          <ul>
+            <li>4</li>
+          </ul>
+          <ul>
+            <li>1</li>
+          </ul>
+          <ul>
+            <li>8</li>
+          </ul>
+          <ul>
+            <li>7</li>
+          </ul>
+          <ul>
+            <li>2</li>
+          </ul>
+          <ul>
+            <li>6</li>
+          </ul>
+          <ul>
+            <li>3</li>
+          </ul>
+        </div>
+        <div class="pointers">
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+          </ul>
+        </div>
+        <!-- Baclwards: Iteration 2 -->
+        <div class="array">
+          <ul>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+          <ul>
+            <li>1</li>
+            <li>8</li>
+          </ul>
+          <ul>
+            <li>2</li>
+            <li>7</li>
+          </ul>
+          <ul>
+            <li>3</li>
+            <li>6</li>
+          </ul>
+        </div>
+        <div class="pointers">
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+        </div>
+        <!-- Backwards: Iteration 1 -->
+        <div id="last">
+          <div class="array">
+            <ul>
+              <li>1</li>
+              <li>4</li>
+              <li>5</li>
+              <li>8</li>
+            </ul>
+            <ul>
+              <li>2</li>
+              <li>3</li>
+              <li>6</li>
+              <li>7</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pointers">
+          <ul>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+          <ul>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+            <li>i</li>
+          </ul>
+        </div>
+        <!-- Array post-mergesort -->
+        <div id="output">
+          <div class="array">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+    </script>
+  </body>
+
+</html>
