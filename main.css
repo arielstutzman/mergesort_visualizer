@@ -1,17 +1,11 @@
 // varaiables
-$moduleWidth: 40em;
+//$moduleWidth: 40em;
+$moduleWidth: 50%;
 $rightOffset: 1.3em;
 $cellPadding: 0.7em 1em;
 $ptrPadding: 0 1em 0.5em 1em;
 $kerning: 0.1em;
 $pSize: 1em;
-// toggle variables for embed pens (need adjusting, shouldn't use vw)
-$s_moduleWidth: 38vw;
-$s_rightOffset: 1.5vw;
-$s_cellPadding: 0.4vw 0.6vw;
-$s_ptrPadding: 0 0.5vw 0.25vw 0.5vw;
-$s_kerning: 0.05vw;
-$s_pSize: 1.2vw;
 // colors
 $powderBlue: rgb(207, 239, 255);
 $coral: rgb(255, 148, 127);
@@ -27,20 +21,52 @@ $pGrey: #655465;
   right: $rightOffset;
 }
 
+@mixin cellStyle {
+  border-radius: 0.3em;
+  display: inline-block;
+}
+
 @mixin arrayFont {
   font-family: "Consolas", sans-serif;
   font-weight: 700;
   font-size: $pSize;
   color: $pGrey;
-  display: inline-block;
 }
 
 /////////////////////////////////////////////
 /////////////////////////////////////////////
-.container {
-  margin: auto;
-  justify-content: center;
-  width: $moduleWidth;
+.wrapper {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.details {
+  border: 1px solid black;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 300px;
+  margin-left: 1em;
+}
+
+.control-bank {
+  border: 1px dashed gray;
+}
+
+.code-window {
+  border: 1px dashed gray;
+}
+
+.graphic {
+  display: inline-block;
+  min-width: $moduleWidth;
+}
+
+@media screen and (max-width: 600px) {
+  .details,
+  .graphic {
+    max-width: 100%;
+  }
 }
 
 h3 {
@@ -57,14 +83,12 @@ h3 {
 }
 
 .array {
-  //border: 1px solid black;
-  width: $moduleWidth;
   display: flex;
   @include arrayPlacement;
   li {
     padding: $cellPadding;
     background-color: rgba(white, 0.7);
-    border-radius: 0.3vw;
+    @include cellStyle;
     @include arrayFont;
   }
 }
@@ -74,7 +98,7 @@ h3 {
   @include arrayPlacement;
   li {
     padding: $ptrPadding;
-    border-radius: 0.3vw;
+    @include cellStyle;
     @include arrayFont;
   }
 }
@@ -82,7 +106,7 @@ h3 {
 // top "input" array
 #input {
   background-color: $powderBlue;
-  margin-bottom: 0.2vw;
+  margin-bottom: 0.2em;
   li {
     background-color: rgba(7, 29, 75, 0.37);
     color: $softYellow;
@@ -92,7 +116,7 @@ h3 {
 // bottom "output" array
 #output {
   background-color: $lightCoral;
-  margin-top: 0.2vw;
+  margin-top: 0.2em;
   li {
     background-color: rgba(55, 38, 47, 0.37);
     color: $softYellow;
